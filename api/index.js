@@ -24,6 +24,8 @@ mongoose.connection.on('disconnected', () => {
 });
 
 // middelwares
+app.use(express.json());
+
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', usersRoute);
 app.use('/api/v1/hotels', hotelsRoute);
